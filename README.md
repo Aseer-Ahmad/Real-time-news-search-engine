@@ -12,7 +12,9 @@ It then uses Bytewax to streamline the messages from our Kafka Topic by further 
 
 <b>We need to set up the following : </b>
 
-- A new Upstash Kafka Cluster [requires registration](https://console.upstash.com/) : create cluster (chose closest region for our environment) -> create topic (to send and get messages)
+- A new Upstash Kafka Cluster [requires registration](https://console.upstash.com/) :
+  - create cluster (chose closest region for our environment)
+  - create topic (to send and get messages)
 - A new Upstash Vector Index 
 - Registering to News APIs
 - Install environment
