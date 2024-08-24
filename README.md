@@ -20,11 +20,10 @@ It then uses Bytewax to streamline the messages from our Kafka Topic by further 
 - Install environment using poetry
 
 
-At this point, you can check to check if the producer are working or not by running the following. After running you can check in your Kafka topic if messages have been sent . 
+This step shows that producer is thread safe and is sending messages based on a fetch window. The data after being fetched from APIs is modelled into a CommonDocument format . For each API , a KafkaProducerThread is instantiated inside a KafkaProducerSwarm. 
+You can check to check if the producer are working or not by running the following. After running you can check in your Kafka Topic if messages are being received. 
 ```
 python -m producer
 ```
-
-This step shows that producer is thread safe and is sending messages based on the fetch window. 
 
 
