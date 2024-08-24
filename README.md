@@ -16,7 +16,7 @@ It then uses Bytewax to streamline the messages from our Kafka Topic by further 
   - create cluster (chose closest region for our environment)
   - create topic (to send and get messages)
 - A new Upstash Vector Index 
-- Registering to News APIs and add your keys to the .env file
+- Registering to News APIs and add your keys to a .env file
 - Install environment using poetry
 
 

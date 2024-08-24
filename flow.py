@@ -68,6 +68,7 @@ def build(
     )
     # _ = op.inspect("dbg_embed", stream)
     stream = op.output("output", stream, _build_output())
+    
     logger.info("Successfully created bytewax dataflow.")
     logger.info(
         "\tStages: Kafka Input -> Map -> Refine -> Chunkenize -> Embed -> Upsert"
