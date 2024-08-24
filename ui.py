@@ -13,14 +13,14 @@ from io import BytesIO
 import requests
 import streamlit as st
 from PIL import Image
-from src.embeddings import TextEmbedder
-from src.settings import settings
-from src.cleaners import clean_full
+from embeddings import TextEmbedder
+from settings import settings
+from cleaners import clean_full
 from upstash_vector import Index
 
 v_index = Index(url=settings.UPSTASH_VECTOR_ENDPOINT, token=settings.UPSTASH_VECTOR_KEY)
 
-st.title("Upstash Real-Time News Search")
+st.title("Real-Time News Search")
 results_placeholder = st.empty()
 
 

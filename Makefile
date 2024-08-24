@@ -41,21 +41,18 @@ install:
 	@echo "Installing Packages"
 	@echo "Changing to pyproject.toml location..."
 	@bash -c " PYTHON_KEYRING_BACKEND=keyring.backends.fail.Keyring poetry install"
-test:
-	@echo "$(GREEN) [TESTING] Running UnitTests $(RESET)"
-	@bash -c "poetry run pytest tests/"
 	
 run_producers:
 	@echo "$(GREEN) [RUNNING] Producers $(RESET)"
-	@bash -c "poetry run python -m src.producer"
+	@bash -c "poetry run python -m producer"
 
 run_pipeline:
 	@echo "$(GREEN) [RUNNING] Bytewax Pipeline $(RESET)"
-	@bash -c "RUST_BACKTRACE=1 poetry run python -m bytewax.run src/start:flow"
+	@bash -c "RUST_BACKTRACE=1 poetry run python -m bytewax.run start:flow"
 
 clean_vdb:
 	@echo "$(RED) [CLEANING] Upstash Vector DB $(RESET)"
-	@bash -c "poetry run python -m src.helpers clean_vectordb"
+	@bash -c "poetry run python -m helpers clean_vectordb"
 
 run_ui:
 	@echo "$(GREEN) [RUNNING] Streamlit UI interface $(RESET)"
