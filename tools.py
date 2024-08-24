@@ -104,7 +104,7 @@ class NewsFetcher:
             NewsAPIModel(**article).to_common()
             for article in response.get("articles", [])
         ]
-
+    
     @handle_article_fetching
     def fetch_from_newsdataapi(self) -> List[Dict]:
         """Fetch news data from NewsDataAPI."""
