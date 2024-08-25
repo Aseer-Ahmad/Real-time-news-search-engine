@@ -3,7 +3,7 @@
 A live system that fetches news articles from live news APIs, serializes and streams messages to a Kafka Topic. 
 It then uses Bytewax to streamline the messages from our Kafka Topic by further cleaning, parsing, chunking, embedding, and upserting vectors to a Vector Database followed by a UI finnally from which we can interact with our database.
 
-<img src="\content\1.gif"/>
+![Alt Text](https://github.com/Aseer-Ahmad/Real-time-news-search-engine/blob/main/content/1.gif)
 
 
 ## Tools used : 
