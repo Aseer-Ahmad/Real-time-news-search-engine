@@ -37,7 +37,7 @@ class AppSettings(BaseSettings):
     NEWS_TOPIC: str
     ARTICLES_BATCH_SIZE: int = 5
 
-    FETCH_WAIT_WINDOW: int = 5  # seconds (30 minutes)
+    FETCH_WAIT_WINDOW: int = 1800  # seconds (30 minutes)
 
     EMBEDDING_MODEL_ID: str = "sentence-transformers/all-MiniLM-L6-v2"
     EMBEDDING_MODEL_MAX_INPUT_LENGTH: int = 384
