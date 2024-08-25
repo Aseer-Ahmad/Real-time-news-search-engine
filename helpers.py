@@ -3,8 +3,8 @@
 """
 
 import fire
-from .settings import settings
-from .logger import get_logger
+from settings import settings
+from logger import get_logger
 from upstash_vector import Index
 
 logger = get_logger("[DEV][Helpers]")
