@@ -1,8 +1,7 @@
 [tool.poetry]
-name = "upstash-ingest"
+name = "kafka"
 version = "0.1.0"
 description = ""
-authors = ["razvantalex <alexandrurazvant@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
