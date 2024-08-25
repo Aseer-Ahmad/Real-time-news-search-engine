@@ -12,7 +12,7 @@ from typing import Optional, Union
 import numpy as np
 from transformers import AutoModel, AutoTokenizer
 
-from settings import settings
+from settings import settings 
 from logger import get_logger
 
 logger = get_logger(__name__)
