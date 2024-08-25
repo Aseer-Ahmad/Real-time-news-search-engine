@@ -19,11 +19,18 @@ It then uses Bytewax to streamline the messages from our Kafka Topic by further 
 - Registering to News APIs and add your keys to a .env file
 - Install environment using poetry
 
-
-This step shows that producer is thread safe and is sending messages based on a fetch window. The data after being fetched from APIs is modelled into a CommonDocument format . For each API , a KafkaProducerThread is instantiated inside a KafkaProducerSwarm. 
-To check if the producer are working run the following, after which you will find the messages being sent to your Kafka cluster topic.
+This step shows that producer is thread safe and is sending messages based on a fetch window. The data after being fetched from APIs is modelled into a CommonDocument format . For each API , a KafkaProducerThread is instantiated inside a KafkaProducerSwarm. To check if the producer are working run the following, after which you will find the messages being sent to your Kafka cluster topic.
 ```
-python -m producer
+make run_producer
 ```
 
+Next, you can start your consumer pipeline which will then consume messages and using Bytewax dataflow programming model eventually upserting the final created embeddings using sentence transformers to Upstash Vectors. Run this using the following make target.
+```
+make run_pipeline
+```
+
+Finally , you can start the UI that will fetch from the Upstash vector client by mathcing the question embedding. Run , 
+```
+make run_ui
+```
 
