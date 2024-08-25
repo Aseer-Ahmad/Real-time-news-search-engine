@@ -2,6 +2,7 @@
 name = "kafka"
 version = "0.1.0"
 description = ""
+authors = ["razvantalex <alexandrurazvant@gmail.com>, aseer <a3kiitglobal@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
