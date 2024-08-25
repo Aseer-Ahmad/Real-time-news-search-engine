@@ -1,7 +1,6 @@
 # Real-time-news-search-engine
 
-A live system that fetches news articles from live news APIs, serializes and streams messages to a Kafka Topic. 
-It then uses Bytewax to streamline the messages from our Kafka Topic by further cleaning, parsing, chunking, embedding, and upserting vectors to a Vector Database followed by a UI finnally from which we can interact with our database.
+A live system that fetches news articles from live news APIs, serializes and streams messages to a Kafka Topic.  It then uses Bytewax to streamline the messages from our Kafka Topic by further cleaning, parsing, chunking, embedding, and upserting vectors to a Vector Database followed by a UI finnally from which we can interact with our database. 
 
 ![Alt Text](https://github.com/Aseer-Ahmad/Real-time-news-search-engine/blob/main/content/1.gif)
 
@@ -26,8 +25,8 @@ It then uses Bytewax to streamline the messages from our Kafka Topic by further 
   - ```
     make install
     ```
-T
-his step shows that producer is thread safe and is sending messages based on a fetch window. The data after being fetched from APIs is modelled into a CommonDocument format . For each API , a KafkaProducerThread is instantiated inside a KafkaProducerSwarm. To check if the producer are working run the following, after which you will find the messages being sent to your Kafka cluster topic.
+
+This step shows that producer is thread safe and is sending messages based on a fetch window. The data after being fetched from APIs is modelled into a CommonDocument format . For each API , a KafkaProducerThread is instantiated inside a KafkaProducerSwarm. To check if the producer are working run the following, after which you will find the messages being sent to your Kafka cluster topic.
 ```
 make run_producer
 ```
@@ -41,3 +40,5 @@ Finally , you can start the UI that will fetch from the Upstash vector client by
 ```
 make run_ui
 ```
+
+Thanks to Alex Razvant for his article on this project. 
