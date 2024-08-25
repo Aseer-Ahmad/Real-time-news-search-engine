@@ -17,7 +17,10 @@ It then uses Bytewax to streamline the messages from our Kafka Topic by further 
   - create topic (to send and get messages)
 - A new Upstash Vector Index 
 - Registering to News APIs and add your keys to a .env file
-- Install environment using poetry
+- Install environment and library manager poetry by running 
+  - ```
+    make install
+    ```
 
 This step shows that producer is thread safe and is sending messages based on a fetch window. The data after being fetched from APIs is modelled into a CommonDocument format . For each API , a KafkaProducerThread is instantiated inside a KafkaProducerSwarm. To check if the producer are working run the following, after which you will find the messages being sent to your Kafka cluster topic.
 ```
